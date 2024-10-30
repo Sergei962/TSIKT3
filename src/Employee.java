@@ -1,7 +1,7 @@
 public class Employee implements Person {
     private String name;
     private String surname;
-    private int age;
+    private int age; // Текущий возраст работника
 
     public Employee(String name, String surname, int age) {
         this.name = name;
@@ -11,6 +11,7 @@ public class Employee implements Person {
 
     @Override
     public void getInfo() {
-        System.out.println("Name: " + name + ", Surname: " + surname + ", Age: " + age);
+        int yearsLeftToWork = 62 - age; // Вычисляем оставшиеся годы до выхода на пенсию
+        System.out.println("Name: " + name + ", Surname: " + surname + ", Age: " + age + ", Years left to work: " + yearsLeftToWork);
     }
 }
